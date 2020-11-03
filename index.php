@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Mikołaj Wojdalski</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="top">
-            <h1>Mikołaj Wojdalski</h1>
-            <a href="index.html"><div class="link">Karta</div></a>
-        </div>
-        <div class="left">
-            <div class="insert">
-                <form action="insert.php" method="post">
-                    <input type="text" class="tekst" placeholder="Podaj autora" name="name" id="">
-                    <input type="text" class="tekst" placeholder="Podaj tytuł" name="tytul" id="">
-                    <input type="submit" value="Dodaj">
-                </form>
-            </div>
-
-        </div>
-        <div class="middle">
-            <?php
-                $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373177", "neAKxXba6X", "sql7373177");
-                $sql = "SELECT * FROM lib_autor, lib_autor_tytul, lib_tytul WHERE 
-                lib_autor.id_autor = lib_autor_tytul.id_autor
-                AND lib_tytul.id_tytul = lib_autor_tytul.id_tytul";
-                $result = mysqli_query($conn, $sql);
-
-                echo("<table>");
-                echo("
-                <th>Nazwisko</th>
-                <th>Tytuł</th>
-                ");
-                while($row=mysqli_fetch_assoc($result)){
-                    echo("<tr>");
-                    echo("<td>");
-                    echo($row['name']);
-                    echo("</td>");
-                    echo("<td>");
-                    echo($row['tytul']);
-                    echo("</td>");
-                    echo("</tr>");
-                }
-                echo("</table>");
-            ?>
-        </div>
+<div class="container">
+    <div class="head">
+        <h1>Mikołaj Wojdalski</h1>
+        <div class="linki">
+        <a href="index.html"><div class="link">Karty</div></a>
        
+        </div>
+        
     </div>
-</body>
+    <div class="left">
+    <?php
+    $conn = new mysqli("localhost","root","","test");
+    //$conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
 
+    $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
+
+    $result = $conn->query( $sql );
+    echo("<table border=1>");
+    echo("<tr>
+    <td>name</td>
+    <td>tytul</td>
+    </tr>");
+
+    while( $row = $result->fetch_assoc())
+    {
+        echo("<tr>
+        <td>".$row['name']."</td>
+        <td>".$row['tytul']."</td>
+        ");
+    }
+
+    echo("</table>");
+?>
+
+</div>
+    <div class="right">
+        <form action="insert_autorzy.php" method="POST">
+            <input type="text" name="name">Nazwisko <br>
+            <input type="text" name="tytul">Tytul <br>
+            <input type="submit" value="wyslij">
+        </form>
+    </div>
+    
+</div>
+    
+</body>
 </html>
