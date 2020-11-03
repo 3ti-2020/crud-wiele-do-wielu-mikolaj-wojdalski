@@ -2,12 +2,12 @@
 {
     display: grid;
     height: 100vh;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 1vh 1vh 1vh;
+    grid-template-rows: 1vh 1vh 1vh;
     grid-template-areas: 
     "top top top"
-    "left mid mid"
-    "left mid mid";
+    "left middle middle"
+    "left middle middle";
 }
 .top
 {
@@ -21,18 +21,10 @@
 }
 .mid
 {
-    grid-area: mid;
+    grid-area: middle;
     background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
 }
-.myrow{
-    background-color: black;
-
-}
-.myrow:nth-child(odd){
-    background-color: red;
-    
+.link{
+    background-color: aqua;
+    padding: 20px;
 }

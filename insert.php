@@ -1,13 +1,8 @@
 <?php
- $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373177", "itRjvRpuqe", "sql7373177");
- $sql = "INSERT INTO lib_autor(id_autor, imie) VALUES (NULL, '".$_POST['imie']."') ";
- mysqli_query($conn, $sql);
- header('Location: https://mikolaj-wojdalski.herokuapp.com');
+     $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373177", "neAKxXba6X", "sql7373177");
+     $autor = $_POST['name'];
+     $tytul = $_POST['tytul'];
+     $sql = "INSERT INTO lib_autor VALUES (NULL, $autor); INSERT INTO lib_tytul VALUES (NULL, $tytul);";
+     $result = mysqli_query($conn, $sql);
+     header("Location: index.php");
 ?>
-
-<?php
- $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373177", "itRjvRpuqe", "sql7373177");
- $sql = "INSERT INTO lib_tytul(id_tytul, tytul) VALUES (NULL , '".$_POST['tytul']."') ";
- mysqli_query($conn, $sql);
- header('Location: https://mikolaj-wojdalski.herokuapp.com');
-?> 
