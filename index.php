@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikołaj Wojdalski</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/39dd038290.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
     <div class="head">
-        <h1>Mikołaj Wojdalski 14</h1>
-        <div class="linki">
-        <a href="card/card.html"><div class="link">Karty</div></a>
-        <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
-       
+        <div class="a">
+        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-mikolaj-wojdalski"><div class="ikona"><i class="fab fa-github"></i></div></a>
+        
         </div>
+        
+        <div class="b"> 
+            <h1>Mikolaj Wojdalski 14</h1>
+            <div class="linki">
+            <a href="card/card.html"><div class="link">Karty</div></a>
+            <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
+            </div>
+       </div>
+
+       <div class="c">
+            
+        </div>
+
+      
+        
         
     </div>
     <div class="left">
@@ -27,8 +41,8 @@
     $result = $conn->query( $sql );
     echo("<table border=3>");
     echo("<tr>
-    <td>name</td>
-    <td>tytul</td>
+    <td>Autor</td>
+    <td>Tytuł</td>
     </tr>");
 
     while( $row = $result->fetch_assoc())
