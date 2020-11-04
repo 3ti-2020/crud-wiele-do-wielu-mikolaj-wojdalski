@@ -17,7 +17,8 @@
 
 .head
 {
-    background: red;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 12%, rgba(255,0,0,1) 66%, rgba(0,0,0,1) 94%);
     grid-area: a;
     display: flex;
     justify-content: center;
@@ -28,7 +29,8 @@
 .left
 {
     grid-area: b;
-    background: green;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 19%, rgba(14,255,0,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +38,8 @@
 
 .right
 {
-    background: blue;
+    background: rgb(255,0,254);
+    background: linear-gradient(90deg, rgba(255,0,254,1) 0%, rgba(0,0,0,1) 86%); 
     grid-area: c;
     display: flex;
     justify-content: center;
@@ -46,19 +49,19 @@
 .link
 {
     padding: 20px;
-    background: whitesmoke;
+    background: darkblue;
     margin: 10px;
 }
 
 a
 {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .link:hover
 {
-    background: rgb(218, 218, 218);
+    background: darkblue;
 }
 
 .linki
@@ -67,4 +70,12 @@ a
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+.myrow{
+    background-color: salmon;
+
+}
+.myrow:nth-child(odd){
+    background-color: wheat;
+    
 }

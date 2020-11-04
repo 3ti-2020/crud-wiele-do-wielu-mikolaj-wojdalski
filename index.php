@@ -11,7 +11,8 @@
     <div class="head">
         <h1>Mikołaj Wojdalski 14</h1>
         <div class="linki">
-        <a href="index.html"><div class="link">Karty</div></a>
+        <a href="card/card.html"><div class="link">Karty</div></a>
+        <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
        
         </div>
         
@@ -24,7 +25,7 @@
     $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
 
     $result = $conn->query( $sql );
-    echo("<table border=1>");
+    echo("<table border=3>");
     echo("<tr>
     <td>name</td>
     <td>tytul</td>
@@ -32,10 +33,14 @@
 
     while( $row = $result->fetch_assoc())
     {
-        echo("<tr>
-        <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>
-        ");
+        echo("<tr class='myrow'>");
+                    echo("<td>");
+                    echo($row['name']);
+                    echo("</td>");
+                    echo("<td>");
+                    echo($row['tytul']);
+                    echo("</td>");
+                    echo("</tr>");
     }
 
     echo("</table>");
@@ -46,7 +51,7 @@
         <form action="insert_autorzy.php" method="POST">
             <input type="text" name="name">Nazwisko <br>
             <input type="text" name="tytul">Tytul <br>
-            <input type="submit" value="wyslij">
+            <input type="submit" value="Wyślij">
         </form>
     </div>
     
