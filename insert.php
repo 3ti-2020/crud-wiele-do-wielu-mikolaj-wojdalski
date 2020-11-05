@@ -1,3 +1,4 @@
+
 <?php 
 //$conn = new mysqli("localhost","root","","test");
 $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
@@ -23,5 +24,7 @@ $sql=" INSERT INTO lib_autor_tytul (id_autor_tytul, id_autor,id_tytul) values (N
 mysqli_query($conn, $sql);
 
 $conn->close(); 
+
+header('location:/1/index.php');
 
 ?>

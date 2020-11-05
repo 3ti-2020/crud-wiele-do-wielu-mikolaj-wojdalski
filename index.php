@@ -20,6 +20,7 @@
             <div class="linki">
             <a href="card/card.html"><div class="link">Karty</div></a>
             <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
+            <a href=""><div class="link">Logowanie</div></a>
             </div>
        </div>
 
@@ -54,7 +55,8 @@
                     echo("<td>");
                     echo($row['tytul']);
                     echo("</td>");
-                    echo("</tr>");
+                   // echo("<td> <form action='delete.php' method='POST'> <input type='hidden' name='id' value=".$row['id_autor_tytul']."> <input type='submit' value='delete'> </form> </td>");
+                    //echo("</tr>");
     }
 
     echo("</table>");
@@ -62,10 +64,12 @@
 
 </div>
     <div class="right">
-        <form action="insert_autorzy.php" method="POST">
-            <input type="text" name="name">Nazwisko <br>
-            <input type="text" name="tytul">Tytul <br>
+        <form action="insert.php" method="POST">
+        Autor <br>
+            <input type="text" name="name"><br>Tytuł <br>
+            <input type="text" name="tytul"><br> 
             <input type="submit" value="Wyślij">
+            
         </form>
     </div>
     

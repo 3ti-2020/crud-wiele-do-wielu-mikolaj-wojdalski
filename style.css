@@ -20,7 +20,7 @@
 .head
 {
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 12%, rgba(255,0,0,1) 66%, rgba(0,0,0,1) 95%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 12.5%, rgba(255,0,0,1) 66%, rgba(0,0,0,1) 95%);
     grid-area: a;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
     flex-direction: row;
     width: 100%;
     font-family: sui generis;
-    font-size: 30px;
+    font-size: 25px;
 }
 .a{
     width: 33%;
@@ -46,6 +46,7 @@
     justify-content: center;
     flex-direction: column;
     height: 25vh;
+    color: black;
    
 }
 .c{
@@ -80,11 +81,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
+    color: white;
+
 }
 
 .link
 {
-    padding: 20px;
+    padding: 15px;
     background: darkblue;
     margin: 10px;
 }
