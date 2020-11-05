@@ -1,30 +1,37 @@
+<?php
+$conn = new mysqli("remotemysql.com", "scKdXHDy41", "HT27TrSRyB", "scKdXHDy41");
 
-<?php 
-//$conn = new mysqli("localhost","root","","test");
-$conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
+$autor = $_POST['imie'];
+$tytul = $_POST['tytul'];
 
-$sqlGetId = "SELECT LAST_INSERT_ID()";
+$sql_autor = "INSERT INTO `lib_autor`(`id_autor`, `imie`) VALUES (NULL,'$autor')";
 
-$sql=" INSERT INTO lib_autor (id, name) values (NULL, '".$_POST['name']."') ";
-mysqli_query($conn, $sql);
-$result = mysqli_query($conn, $sqlGetId);
-while ($row = $result->fetch_assoc()) {
-    $autorId = $row["LAST_INSERT_ID()"];
+$query1 = mysqli_query($conn, $sql_autor);
+
+if($query1){
+
+    $sql_tytul = "INSERT INTO `lib_tytul`(`id_tytul`, `tytul`) VALUES (NULL,'$tytul')";
+
+    $query2 = mysqli_query($conn, $sql_tytul);
+
 }
 
-$sql=" INSERT INTO lib_tytul (id_tytul, tytul) values (NULL, '".$_POST['tytul']."') ";
-mysqli_query($conn, $sql);
-$result = mysqli_query($conn, $sqlGetId);
-while ($row = $result->fetch_assoc()) {
-    $tytulId = $row["LAST_INSERT_ID()"];
+if($query2){
+    $id_autor = "SELECT id_autor FROM `lib_autor` WHERE imie='$autor'";
+$result1 = $conn->query($id_autor);
+while($row1 = $result1->fetch_assoc()){
+    $autorid = $row1['id_autor'];
+};
+
+$id_tytul = "SELECT id_tytul FROM `lib_tytul` WHERE tytul='$tytul'";
+$result2 = $conn->query($id_tytul);
+while($row2 = $result2->fetch_assoc()){
+    $tytulid = $row2['id_tytul'];
+};
+
+$sql_a_t = "INSERT INTO `lib_autor_tytul`(`id_autor_tytul`, `id_autor`, `id_tytul`) VALUES (NULL,'$autorid','$tytulid')";
+
+$query3 = mysqli_query($conn, $sql_a_t);
 }
-
-$sql=" INSERT INTO lib_autor_tytul (id_autor_tytul, id_autor,id_tytul) values (NULL, $autorId, $tytulId)";
-
-mysqli_query($conn, $sql);
-
-$conn->close(); 
-
-header('location:/1/index.php');
-
+header('Location: https://mikolaj-wojdalski.herokuapp.com/')
 ?>
