@@ -53,7 +53,7 @@
     <div class="right">
         <form action="insert.php" method="POST">
         Autor <br>
-            <input type="text" name="name"><br>Tytuł <br>
+            <input type="text" name="imie"><br>Tytuł <br>
             <input type="text" name="tytul"><br> 
             <input type="submit" value="Wyślij">
             
