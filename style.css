@@ -129,7 +129,16 @@ tr{
     font-size: 50px;
     text-align: center;
     margin: 10px;
-    
-    font-weight: 200;
-
+  }
+  
+.del{
+    font-size: 50px;
+    color: white;
+    background-color: red;
+}
+.send{
+    font-size: 40px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
 }
