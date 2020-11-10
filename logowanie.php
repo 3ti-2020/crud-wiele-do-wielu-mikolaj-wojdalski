@@ -27,7 +27,7 @@
             <h1>Mikolaj Wojdalski 14</h1>
             <div class="linki">
             
-            <a href="index.php"><div class="link">Wyloguj</div></a>
+            <a href="log/logout.php" class="link">Wyloguj</a>
             
             </div>
        </div>
