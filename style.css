@@ -53,8 +53,11 @@
     width: 33%;
     height: 25vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    
 }
 .ikona{
     

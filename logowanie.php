@@ -1,13 +1,21 @@
+<?php
+    session_start();
+    if (!$_SESSION['login']) {
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikołaj Wojdalski</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/39dd038290.js" crossorigin="anonymous"></script>
+    <title>Zalogowany</title>
 </head>
 <body>
+   
+
 <div class="container">
     <div class="head">
         <div class="a">
@@ -18,23 +26,14 @@
         <div class="b"> 
             <h1>Mikolaj Wojdalski 14</h1>
             <div class="linki">
-            <a href="card/card.html"><div class="link">Karty</div></a>
-            <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
+            
+            <a href="index.php"><div class="link">Wyloguj</div></a>
             
             </div>
        </div>
 
        <div class="c">
-       <form action="log/login.php" method="post">
-        <p>Nazwa użytkownika</p>
-        <input type="text" name="login">
-        <p>Hasło</p>
-        <input type="text" name="haslo"><br>
-        <input type="submit" value="ZALOGUJ">
-        </form>
-        <p>Login: admin <br>
-            Haslo: a</p>
-
+       <a href=""><div class="link">Zalogowano!</div></a>
         </div>
                      
     </div>
@@ -46,11 +45,14 @@
     echo("<th>Id</th>");
     echo("<th>Autor</th>");
     echo("<th>Tytuł</th>");
-    
+    echo("<th>Delete</th>");
     while($row = $result -> fetch_assoc()){
         echo("<tr class='myrow'>");
-        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>");
-       
+        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>"."<td>
+        <form action='delete.php' method='POST'>
+        <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
+        <input type='submit' class='del' value='Delete'>
+        </form> </td>");
         echo("</tr>");
     }
     echo("</table>");
@@ -61,7 +63,7 @@
         <form action="insert.php" method="POST">
         Autor <br>
             <input type="text" name="imie"><br>Tytuł <br>
-            <input type="text" name="tytul"><br> 
+            <input type="text" name="tytul"><br>
             <input type="submit" class='send' value="  Wyślij  ">
             
         </form>
@@ -70,4 +72,5 @@
 </div>
     
 </body>
+
 </html>
