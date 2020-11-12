@@ -27,13 +27,13 @@
             <h3>Zalogowano jako bibliotekarz.</h3>
             <div class="linki">
             
-            <a href="log/logout.php" class="link">Wyloguj</a>
+            
             <a href="card/cardin.html"><div class="link">Wypożycz</div></a>
             </div>
        </div>
 
        <div class="c">
-       <a href=""><div class="link">Zalogowano!</div></a>
+       <a href="log/logout.php" class="link">Wyloguj</a>
         </div>
                      
     </div>
@@ -67,10 +67,13 @@
         echo("<th>Id</th>");
         echo("<th>Autor</th>");
         echo("<th>Tytuł</th>");
+        echo("<th>Id_ucznia</th>");
+        echo("<th>Data wypożyczenia</th>");
+        echo("<th>Termin oddania</th>");
         echo("<th>Oddaj</th>");
         while($row = $result -> fetch_assoc()){
             echo("<tr class='myrow'>");
-            echo("<td>".$row['id_autor']."</td>"."<td>".$row['Autor']."</td>"."<td>".$row['Tytul']."</td>"."<td>
+            echo("<td>".$row['id_autor']."</td>"."<td>".$row['Autor']."</td>"."<td>".$row['Tytul']."</td>"."<td>".$row['user']."</td>"."<td>".$row['data_wyp']."</td>"."<td>".$row['data_oddania']."</td>"."<td>
             <form action='inserty/deleteins.php' method='POST'>
             <input type='hidden' name='id1' value=".$row['id_autor'].">
             <input type='submit' class='od' value='Oddaj'>
