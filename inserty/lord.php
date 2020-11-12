@@ -1,7 +1,7 @@
 <?php
 $conn = new mysqli("remotemysql.com", "scKdXHDy41", "HT27TrSRyB", "scKdXHDy41");
 
-$sql = "INSERT INTO `insert_tab` (`id_autor`, `Autor`, `Tytul`) VALUES (NULL, 'J.K Rowling', 'Harry Potter')";
+$sql = "INSERT INTO `insert_tab` (`id_autor`, `Autor`, `Tytul`) VALUES (NULL, 'J.R.R Tolkien', 'Władca pierścieni')";
 mysqli_query($conn,$sql);
 
 

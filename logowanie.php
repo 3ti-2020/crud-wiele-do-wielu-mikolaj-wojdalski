@@ -38,7 +38,7 @@
                      
     </div>
     <div class="left">
-        <h3>Tabela Delete</h3>
+        <h1>Tabela Usuń książkę</h1>
     <?php
     $conn = new mysqli("remotemysql.com", "scKdXHDy41", "HT27TrSRyB", "scKdXHDy41");
     $result = $conn -> query("select `scKdXHDy41`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`scKdXHDy41`.`lib_autor`.`imie` AS `imie`,`scKdXHDy41`.`lib_tytul`.`tytul` AS `tytul` from `scKdXHDy41`.`lib_tytul` join `scKdXHDy41`.`lib_autor_tytul` join `scKdXHDy41`.`lib_autor` where `scKdXHDy41`.`lib_autor_tytul`.`id_autor` = `scKdXHDy41`.`lib_autor`.`id_autor` and `scKdXHDy41`.`lib_autor_tytul`.`id_tytul` = `scKdXHDy41`.`lib_tytul`.`id_tytul`");
@@ -59,7 +59,7 @@
     echo("</table>");
     ?>
 <br>
-<h3>Tabela Oddaj</h3>
+<h1>Tabela Wypożyczeń</h1>
     <?php
         $conn = new mysqli("remotemysql.com", "scKdXHDy41", "HT27TrSRyB", "scKdXHDy41");
         $result = $conn -> query("SELECT * FROM `insert_tab`");
@@ -72,7 +72,7 @@
             echo("<tr class='myrow'>");
             echo("<td>".$row['id_autor']."</td>"."<td>".$row['Autor']."</td>"."<td>".$row['Tytul']."</td>"."<td>
             <form action='inserty/deleteins.php' method='POST'>
-            <input type='hidden' name='id' value=".$row['id_autor'].">
+            <input type='hidden' name='id1' value=".$row['id_autor'].">
             <input type='submit' class='od' value='Oddaj'>
             </form> </td>");
             echo("</tr>");
@@ -82,11 +82,13 @@
 
 </div>
     <div class="right">
+        
         <form action="insert.php" method="POST">
         Autor <br>
             <input type="text" name="imie"><br>Tytuł <br>
             <input type="text" name="tytul"><br>
-            <input type="submit" class='send' value="  Wyślij  ">
+            <input type="submit" class='send' value="  Wyślij  "><br><br>
+            
             
         </form>
     </div>
