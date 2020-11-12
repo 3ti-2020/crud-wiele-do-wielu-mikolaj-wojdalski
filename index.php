@@ -18,7 +18,7 @@
         <div class="b"> 
             <h1>Mikolaj Wojdalski 14</h1>
             <div class="linki">
-            <a href="card/card.html"><div class="link">Karty</div></a>
+            <a href="card/card.html"><div class="link">Dostępne książki</div></a>
             <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
             
             </div>

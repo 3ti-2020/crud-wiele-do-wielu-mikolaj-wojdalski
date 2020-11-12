@@ -28,7 +28,7 @@
             <div class="linki">
             
             <a href="log/logout.php" class="link">Wyloguj</a>
-            
+            <a href="card/cardin.html"><div class="link">Wypożycz</div></a>
             </div>
        </div>
 

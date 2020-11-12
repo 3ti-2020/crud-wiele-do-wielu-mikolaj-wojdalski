@@ -11,6 +11,12 @@ body {
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
 }
 
+.ikona{
+    font-size: 100px;
+    background-color: orangered;
+    height: 100px;
+    color: papayawhip;
+}
 
 .container {
     width: 1000px;
@@ -44,7 +50,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(
 }
 
 .container .card:nth-child(3) .icon {
-    background: rgb(211, 190, 3);
+    background:orange;
 }
 
 
