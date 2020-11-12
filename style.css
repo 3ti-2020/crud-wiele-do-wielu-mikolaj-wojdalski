@@ -75,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .right
@@ -118,27 +119,32 @@ a
 .myrow{
     background-color: salmon;
     padding: 10px;
-    font-size: 50px;
+    font-size: 30px;
    
 }
 .myrow:nth-child(odd){
     background-color: wheat;
     padding: 10px;
-    font-size: 50px;
+    font-size: 30px;
     
 }
 tr{
     background-color: orange;
     padding: 10px;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     margin: 10px;
   }
   
 .del{
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     background-color: red;
+}
+.od{
+    font-size: 30px;
+    color: white;
+    background-color: purple;
 }
 .send{
     font-size: 40px;

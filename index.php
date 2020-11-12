@@ -39,6 +39,8 @@
                      
     </div>
     <div class="left">
+        <h3>Książki</h3>
+
     <?php
     $conn = new mysqli("remotemysql.com", "scKdXHDy41", "HT27TrSRyB", "scKdXHDy41");
     $result = $conn -> query("select `scKdXHDy41`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`scKdXHDy41`.`lib_autor`.`imie` AS `imie`,`scKdXHDy41`.`lib_tytul`.`tytul` AS `tytul` from `scKdXHDy41`.`lib_tytul` join `scKdXHDy41`.`lib_autor_tytul` join `scKdXHDy41`.`lib_autor` where `scKdXHDy41`.`lib_autor_tytul`.`id_autor` = `scKdXHDy41`.`lib_autor`.`id_autor` and `scKdXHDy41`.`lib_autor_tytul`.`id_tytul` = `scKdXHDy41`.`lib_tytul`.`id_tytul`");
