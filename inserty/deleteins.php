@@ -5,6 +5,6 @@ $sql = "DELETE from insert_tab WHERE id_autor='$id1'";
 
 
  mysqli_query($conn, $sql);
- header('Location: https://mikolaj-wojdalski.herokuapp.com/');
+ header('Location: https://mikolaj-wojdalski.herokuapp.com/logowanie.php');
  //header('Location: http://127.0.0.1/1/logowanie.php')
 ?>

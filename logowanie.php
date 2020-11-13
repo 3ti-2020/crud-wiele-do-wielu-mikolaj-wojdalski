@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/39dd038290.js" crossorigin="anonymous"></script>
     <title>Zalogowany</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
 <div class="container">
     <div class="head">
         <div class="a">
+    
         <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-mikolaj-wojdalski"><div class="ikona"><i class="fab fa-github"></i></div></a>
         
         </div>

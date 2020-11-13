@@ -5,6 +5,6 @@ $sql = "INSERT INTO `insert_tab` (`id_autor`, `Autor`, `Tytul`, `user`,`data_wyp
 mysqli_query($conn,$sql);
 
 
-header('Location: https://mikolaj-wojdalski.herokuapp.com/')
+header('Location: https://mikolaj-wojdalski.herokuapp.com/logowanie.php')
 //header('Location: http://127.0.0.1/1/logowanie.php')
 ?>
