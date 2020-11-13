@@ -150,3 +150,15 @@ i {
     color: white;
     font-size: 20px;
 }
+.warning1{
+    font-family: sui generis;
+    color: red;
+    font-size: 40px;
+   
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
