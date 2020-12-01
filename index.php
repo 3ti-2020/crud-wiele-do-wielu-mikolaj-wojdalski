@@ -67,7 +67,27 @@
             <input type="submit" class='send' value="  Wyślij  ">
             
         </form>
-    </div>
+        <br>
+     
+           
+        <div class="cnt">
+            <form class="form" id="todoForm">
+                <div class="form-row">
+                    <label class="form-label" for="todoMessage">Lista: TO DO</label><br>
+                    <textarea class="form-message" name="todoMessage" id="todoMessage"></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="add">Dodaj</button>
+                </div>
+            </form>
+            
+            <section class="list-cnt">
+                
+                <div class="list" id="todoList">
+                </div>
+            </section>
+        </div>
+   
     
 </div>
     
