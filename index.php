@@ -20,6 +20,7 @@
             <div class="linki">
             <a href="card/card.html"><div class="link">Karty/Dostępne książki</div></a>
             <a href="theme/index.html"><div class="link">Zmiana tła</div></a>
+            <a href="egzamin/index.html"><div class="link">Egzamin</div></a>
             
             </div>
        </div>
